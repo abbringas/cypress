@@ -30,7 +30,7 @@ describe('Update candidate information',()=>{
     my_profile_page.editLocation(data.newPostalCode)
     my_profile_page.verifyIfLocationIsSave(data.newPostalCode)
 
-    my_profile_page.navigateToSection('Languages')
+    my_profile_page.navigateToSection(constant.LANGUAGES)
     cy.verifyURL(data.languagesPageURL)
 
     my_profile_page.addOtherLanguage(data.otherLanguage,data.otherLanguageProficiency)
@@ -40,46 +40,3 @@ describe('Update candidate information',()=>{
     cy.verifyURL(data.loginPageURL)
   }) 
 })
-
-
-
-// describe('Update candidate information',()=>{
-//   beforeEach('Login',()=>{
-//     cy.visit(data.baseURL)
-//     login_page.login(data.email,data.password)
-//   })
-
-//   afterEach('Logout',()=>{
-//     header_page.navigateToSignOut()
-//   })
-
-//   it('Verify Successful login', () => {
-//     cy.verifyURL(data.homepageURL)
-//   }) 
-  
-//   it('Verify navigation to My Profile page', () => {
-//     header_page.navigateToMyProfile()
-//     cy.verifyURL(data.myProfilePageURL)
-//   })
-
-//   it('Verify successful update of contact and location info', () => {
-//     header_page.navigateToMyProfile()
-//     my_profile_page.editContactInfo(data.newPhoneNumber)
-//     my_profile_page.verifyIfContactInfoIsSave(data.newPhoneNumberFormatted)
-//     my_profile_page.editLocation(data.newPostalCode)
-//     my_profile_page.verifyIfLocationIsSave(data.newPostalCode)
-//   })
-
-//   it('Verify navigation to Languages page', () => {
-//     header_page.navigateToMyProfile()
-//     my_profile_page.navigateToSection('Languages')
-//     cy.verifyURL(data.languagesPageURL)
-//   })
-
-//   it('Verify successful update of adding other languages', () => {
-//     header_page.navigateToMyProfile()
-//     my_profile_page.navigateToSection('Languages')
-//     my_profile_page.addOtherLanguage(data.otherLanguage,data.otherLanguageProficiency)
-//     //add verification here
-//   })
-// })
