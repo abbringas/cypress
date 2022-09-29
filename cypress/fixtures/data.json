@@ -1,0 +1,14 @@
+{
+  "baseURL": "https://www.telusinternational.ai/cmp",
+  "email": "abbringas.personal@gmail.com",
+  "password": "anotsosecretPas5w0rd!",
+  "homepageURL": "https://www.telusinternational.ai/cmp/contributor/dashboard",
+  "newPhoneNumber": "9672753684",
+  "newPhoneNumberFormatted": "+639672753684",
+  "newPostalCode": "4114",
+  "myProfilePageURL": "https://www.telusinternational.ai/cmp/contributor/userprofile/basic-info",
+  "languagesPageURL": "https://www.telusinternational.ai/cmp/contributor/userprofile/languages",
+  "otherLanguage": "English (United States)",
+  "otherLanguageProficiency": "Professional working proficiency",
+  "loginPageURL": "https://www.telusinternational.ai/cmp/login"
+}
