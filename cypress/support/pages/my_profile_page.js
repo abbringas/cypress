@@ -35,8 +35,23 @@ export class myProfilePage{
                 btnDelete: () => cy.get('.trash-div')
             }   
         },
-        btnYes : () => cy.contains('button','Yes')
+        btnYes : () => cy.contains('button','Yes'),
+        signInAndSecurity:{
+            btnEdit: () => cy.get('#userprofile-component-container').contains('Edit'),
+            inputPassword: () => cy.get('#userprofile-component-container [aria-label="Password"]'),
+            inputConfirmPassword: () => cy.get('#userprofile-component-container [aria-label="Confirm password"]'),
+            btnSave: () => cy.get('#userprofile-component-container').contains('Save')
+        }
+        
     }
+
+    updatePassword(password){
+        this.elements.signInAndSecurity.btnEdit().click()
+        this.elements.signInAndSecurity.inputPassword().type(password)
+        this.elements.signInAndSecurity.inputConfirmPassword().type(password)
+        this.elements.signInAndSecurity.btnSave().click()
+    }
+
     removeAllOtherlanguages(){  
         this.elements.languages.otherLanguages.div().then($body =>{
             if ($body.find('.trash-div').length > 0){
